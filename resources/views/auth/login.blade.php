@@ -118,10 +118,10 @@
       <div class="panels-container">
         <div class="panel left-panel">
           <div class="content">
-            <h3>New here ?</h3>
+            <h3>Be a member ?</h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-              ex ratione. Aliquid!
+              Learn more about the New Knowledge Hub. 
+              One location for all the latest technology, trends, and insights.
             </p>
             <button class="btn transparent" id="sign-up-btn">
               Sign up
@@ -131,10 +131,9 @@
         </div>
         <div class="panel right-panel">
           <div class="content">
-            <h3>One of us ?</h3>
+            <h3>Already have an account ?</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              laboriosam ad deleniti.
+              Capture the true value of cloud computing and artificial intelligence for your business.
             </p>
             <button class="btn transparent" id="sign-in-btn">
               Sign in

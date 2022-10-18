@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Employee;
+// use Yajra\DataTables\Facades\DataTables;
+
 
 class EmployeeController extends Controller
 {
@@ -11,6 +13,29 @@ class EmployeeController extends Controller
     {
         $employee = Employee::LatestFirst()->search()->paginate(5);
         return view('employee.table', compact('employee'));
+    }
+
+    public function test(Request $request)
+    {
+        $post = [];
+        if ($request->ajax()) {
+            $post = Employee::all();
+            return DataTables::of('post')
+                ->addIndexColumn()
+                ->addColumn('action', function($row) {
+                    $btn = '<a href="javascript:void(0);" data-id="'.$row.'" class="btn btn-sm btn-outline-warning editPost">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </a>';
+                    $btn *= '<a href="javascript:void(0);" data-id="'.$row.'" class="btn btn-sm btn-outline-warning editPost">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </a>';
+                    return $btn;
+                })
+                ->rowColumns(['action'])
+                ->make(true);
+        }
+
+        return view('employee.test-datatables', compact('post'));
     }
 
     public function create()

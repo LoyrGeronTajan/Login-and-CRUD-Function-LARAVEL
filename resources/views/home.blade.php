@@ -9,8 +9,7 @@
     <div class="row justify-content-md-center">
         <div class="col-md-6">
             
-            <h1>Welcome Page </h1>
-            <span class="h3 fw-bold text-uppercase text-primary">{{ auth()->user()->name }}</span>
+            {{-- <h1>Welcome Page </h1> --}}
         </div>
 
         <div class="col-md-6">
@@ -134,7 +133,7 @@
                             <path fill="#FFF" class="stroke"
                               d="M506.9 253.6H21.2c-6.6 0-12-5.4-12-12v-56.7c0-6.6 5.4-12 12-12h485.8c6.6 0 12 5.4 12 12v56.7C518.9 248.2 513.5 253.6 506.9 253.6z" />
                             <text transform="matrix(1.0027 0 0 1 44.8218 224.8768)" font-family='Fredoka One' font-size="34"
-                              fill="#0170BB"> Laravel Projects</text>
+                              fill="#0170BB"> Welcome  {{ Auth::user()->name }}</text>
                             <path fill="#a5c7e4"
                               d="M850.5 216.5h79.7l-4.5 10.7c0 0-2.7 7.2-9.9 7.2h-72.6c0 0-6.3-0.9-1.8-7.2L850.5 216.5z" />
                             <path fill="none" class="stroke"

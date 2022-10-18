@@ -43,7 +43,7 @@
                   <th>Address</th>
                   <th>Email</th>
                   <th>Position</th>
-                  <th colspan="3">Action</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -56,18 +56,21 @@
                     <td>{{ $row->address }}</td>
                     <td>{{ $row->email }}</td>
                     <td>{{ $row->position }}</td>
-                    <td>
-                      <a href="{{ route('employee.show', $row->id) }}" class="btn btn-sm btn-outline-info">View</a>
-                    </td>
-                    <td>
-                      <a href="{{ route('employee.editEmployee', $row->id) }}" class="btn btn-sm btn-outline-warning">Edit</a>
-                    </td>
-                    <td>
+                    <td class="btn-group">
+                      <a href="{{ route('employee.show', $row->id) }}" class="btn btn-sm btn-outline-info">
+                        <i class="fa-regular fa-eye"></i>
+                      </a>
+                   
+                      <a href="{{ route('employee.editEmployee', $row->id) }}" class="btn btn-sm btn-outline-warning">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                      </a>
+                    
+                   
                       {{-- Delete Function --}}
                       <form action="{{ route('employee.delete', $row->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure ?')">Delete</button>
+                        <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure ?')"><i class="fa-solid fa-trash"></i></button>
                       </form>
                       
                     </td>

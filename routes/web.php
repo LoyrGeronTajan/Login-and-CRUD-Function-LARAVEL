@@ -27,6 +27,8 @@ Route::view('/', 'auth.login')->name('auth.login');
 
 
 Route::get('/employee/table', [EmployeeController::class, 'index'])->name('employee.table');
+Route::get('/employee/test-datatables', [EmployeeController::class, 'test'])->name('employee.test-datatables');
+
 
 Route::get('/employee/createEmployee', [EmployeeController::class, 'create'])->name('employee.createEmployee');
 
@@ -41,6 +43,8 @@ Route::get('/employee/editEmployee/{id}', [EmployeeController::class, 'edit'])->
 Route::put('/employee/{id}', [EmployeeController::class, 'update'])->name('employee.update');
 
 Route::delete('/employee/{id}', [EmployeeController::class, 'destroy'])->name('employee.delete');
+
+
 
 // Authentication
 Auth::routes();

@@ -27,7 +27,7 @@ Route::view('/', 'auth.login')->name('auth.login');
 
 
 Route::get('/employee/table', [EmployeeController::class, 'index'])->name('employee.table');
-Route::get('/employee/test-datatables', [EmployeeController::class, 'test'])->name('employee.test-datatables');
+Route::get('/employee/test-datatables', [EmployeeController::class, 'test_dataTables'])->name('employee.test-datatables');
 
 
 Route::get('/employee/createEmployee', [EmployeeController::class, 'create'])->name('employee.createEmployee');

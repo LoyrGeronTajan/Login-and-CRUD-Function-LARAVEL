@@ -34,7 +34,7 @@
             </div>
           @endif
           <div class="table-responsive">
-            <table class="table table-bordered table-hover">
+            <table class="table table-bordered table-hover" id="dataTables">
               <thead>
                 <tr class="text-center">
                   <th>#</th>
@@ -70,7 +70,9 @@
                       <form action="{{ route('employee.delete', $row->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure ?')"><i class="fa-solid fa-trash"></i></button>
+                        <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure ?')">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
                       </form>
                       
                     </td>

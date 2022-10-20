@@ -15,28 +15,12 @@ class EmployeeController extends Controller
         return view('employee.table', compact('employee'));
     }
 
-    public function test(Request $request)
-    {
-        $post = [];
-        if ($request->ajax()) {
-            $post = Employee::all();
-            return DataTables::of('post')
-                ->addIndexColumn()
-                ->addColumn('action', function($row) {
-                    $btn = '<a href="javascript:void(0);" data-id="'.$row.'" class="btn btn-sm btn-outline-warning editPost">
-                                <i class="fa-regular fa-pen-to-square"></i>
-                            </a>';
-                    $btn *= '<a href="javascript:void(0);" data-id="'.$row.'" class="btn btn-sm btn-outline-warning editPost">
-                                <i class="fa-regular fa-pen-to-square"></i>
-                            </a>';
-                    return $btn;
-                })
-                ->rowColumns(['action'])
-                ->make(true);
-        }
+   public function test_dataTables()
+   {
+        $dataTables = Employee::all();
 
-        return view('employee.test-datatables', compact('post'));
-    }
+        return view('employee.test-datatables', compact('dataTables'));
+   }
 
     public function create()
     {

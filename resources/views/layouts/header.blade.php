@@ -24,7 +24,7 @@
                       </a>
                       <ul class="dropdown-menu">
                           <li><a class="dropdown-item" href="{{ route('employee.table') }}">Table</a></li>
-                          <li><a class="dropdown-item" href="{{ route('employee.createEmployee') }}">Add Employee</a>
+                          <li><a class="dropdown-item" href="{{ route('employee.test-datatables') }}">DataTables</a>
                           </li>
 
                       </ul>

@@ -1,4 +1,5 @@
-@extends('layouts.main')
+@extends('layouts.header')
+
 
 @section('title', 'CRUD | View Employee')
 

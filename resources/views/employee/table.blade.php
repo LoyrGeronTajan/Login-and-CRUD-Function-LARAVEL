@@ -13,11 +13,11 @@
               <a href="{{ route('employee.createEmployee') }}" class="btn btn-sm btn-outline-success">Add</a>
             </div>
             <div class="col-md-6">
-                <div class="d-flex mx-3 mt-3" role="search">
+                {{-- <div class="d-flex mx-3 mt-3" role="search">
                   <input class="form-control form-control-sm me-2" type="search" id="search" name="search"
                   value="{{ request('search') }}" placeholder="Search" aria-label="Search">
                   <button type="submit" class="btn btn-outline-success">Search</button>
-                </div>
+                </div> --}}
             </div>
           </div>
         </form>
